@@ -1,0 +1,11 @@
+<% if @conversations.empty? %>
+	You don't have any conversations, Please start any <%= link_to 'Chat', new_message_path%>
+<% else %>
+	<h1>Your conversations</h1>
+
+	<div id="conversations">
+	  <%= render @conversations %>
+	</div>
+
+	<%= link_to 'New Chat', new_message_path%>
+<% end %>
